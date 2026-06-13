@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --bg:#0f172a;
+    --card:#1e293b;
+    --accent:#38bdf8;
+    --text:#f8fafc;
+    --gray:#cbd5e1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(
+        135deg,
+        #020617,
+        #0f172a,
+        #111827
+    );
+    color:var(--text);
+}
+
+/* Container */
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* Back Button */
+
+.back-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--accent);
+    color:#0f172a;
+    padding:12px 24px;
+    border-radius:12px;
+    font-weight:600;
+    margin-bottom:30px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Title */
+
+h1{
+    text-align:center;
+    color:var(--accent);
+    font-size:3rem;
+    margin-bottom:40px;
+}
+
+/* Sections */
+
+.section{
+    background:rgba(30,41,59,0.9);
+    backdrop-filter:blur(12px);
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:.3s;
+}
+
+.section:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.section h2{
+    color:var(--accent);
+    margin-bottom:15px;
+    border-left:4px solid var(--accent);
+    padding-left:12px;
+}
+
+.section p{
+    color:var(--gray);
+    line-height:1.8;
+}
+
+.section ul{
+    margin-left:20px;
+}
+
+.section li{
+    color:var(--gray);
+    line-height:1.8;
+    margin-bottom:8px;
+}
+
+/* Screenshots */
+
+.screenshots{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:25px;
+}
+
+.screenshots img{
+    width:100%;
+    border-radius:15px;
+    border:2px solid #334155;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.screenshots img:hover{
+    transform:scale(1.03);
+    border-color:var(--accent);
+}
+
+/* Tech Stack */
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.tech{
+    background:var(--accent);
+    color:#0f172a;
+    padding:10px 16px;
+    border-radius:30px;
+    font-weight:600;
+    font-size:14px;
+}
+
+/* Workflow */
+
+.workflow{
+    text-align:center;
+    padding:20px;
+    background:#0f172a;
+    border-radius:15px;
+}
+
+.workflow p{
+    color:var(--accent);
+    font-weight:600;
+    margin:10px 0;
+}
+
+/* GitHub Button */
+
+.github-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:var(--accent);
+    color:#0f172a;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.github-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* Screenshot Captions */
+
+.screenshot-card{
+    text-align:center;
+}
+
+.screenshot-card p{
+    margin-top:10px;
+    color:#94a3b8;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--accent);
+    border-radius:10px;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .container{
+        padding:20px;
+    }
+
+    h1{
+        font-size:2rem;
+    }
+
+    .section{
+        padding:20px;
+    }
+
+    .screenshots{
+        grid-template-columns:1fr;
+    }
+
+    .back-btn{
+        width:100%;
+        text-align:center;
+    }
+}
+
+/*LIGHTBOX*/
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.95);
+    z-index:9999;
+
+    display:none; /* IMPORTANT */
+    justify-content:center;
+    align-items:center;
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:12px;
+    transition:transform .3s ease;
+}
+
+.close-lightbox{
+    position:fixed;
+    top:20px;
+    right:30px;
+
+    color:#ffffff;
+    font-size:45px;
+    font-weight:bold;
+
+    cursor:pointer;
+    z-index:10001;
+
+    transition:0.3s ease;
+}
+
+.close-lightbox:hover{
+    color:#38bdf8;
+    transform:scale(1.15);
+}
+
+.prev{
+    left:30px;
+}
+
+.next{
+    right:30px;
+}
+
+.prev:hover,
+.next:hover{
+    background:#38bdf8;
+    color:#0f172a;
+}
