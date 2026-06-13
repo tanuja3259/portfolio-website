@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Tanuja Bhatt</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .resume-container{
+            max-width:1200px;
+            margin:auto;
+            padding:40px 20px;
+            text-align:center;
+        }
+
+        .resume-title{
+            color:#38bdf8;
+            margin-bottom:30px;
+            font-size:2.5rem;
+        }
+
+        .resume-actions{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            flex-wrap:wrap;
+            margin-bottom:30px;
+        }
+
+        .resume-btn{
+            display:inline-block;
+            background:#38bdf8;
+            color:#0f172a;
+            text-decoration:none;
+            padding:12px 24px;
+            border-radius:30px;
+            font-weight:600;
+            transition:0.3s;
+        }
+
+        .resume-btn:hover{
+            transform:translateY(-3px);
+        }
+
+        .resume-viewer{
+            width:100%;
+            height:90vh;
+            border:none;
+            border-radius:20px;
+            background:white;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        @media(max-width:768px){
+
+            .resume-title{
+                font-size:2rem;
+            }
+
+            .resume-viewer{
+                height:75vh;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+
+        <h1 class="resume-title">My Resume</h1>
+
+        <div class="resume-actions">
+
+            <a href="index.html" class="resume-btn">
+                ← Back to Portfolio
+            </a>
+
+            <a href="resume_tanuja.pdf"
+               download
+               class="resume-btn">
+                Download Resume
+            </a>
+
+        </div>
+
+        <object
+    data="resume_tanuja.pdf"
+    type="application/pdf"
+    width="100%"
+    height="900px">
+
+    <p>
+        Your browser does not support PDF viewing.
+        <a href="resume_tanuja.pdf">
+            Download Resume
+        </a>
+    </p>
+
+</object>
+
+    </div>
+
+</body>
+</html>
