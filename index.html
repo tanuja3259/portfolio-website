@@ -1,166 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanuja Bhatt Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanuja Bhatt — CSE Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <nav>
-        <h1>TANUJA BHATT</h1>
+<!-- CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- CANVAS BACKGROUND -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- NAVBAR -->
+<header id="navbar">
+  <nav class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <a href="resume.html" class="nav-cta">Resume</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-
-    <h1>Hi, I am Tanuja Bhatt</h1>
-
-    <h2>A Bachelor of Technology Student</h2>
-
-    <p>
-        Computer Science Engineering student passionate about software
-        development, problem solving, and web technologies.
-    </p>
-
-
-</div>
-<a href="resume.html" class="btn">
-    View Resume
-</a>
-<a href="#projects" class="btn">View Projects</a>
-</section>
-
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        Highly driven Computer Science engineering student with strong fundamentals in programming, databases, data structures, and distributed systems. Skilled in C++ with working knowledge of 
-Python, Java, SQL, and Linux. Passionate about software development and eager to contribute to innovative projects.
-    </p>
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-    <p>
-        Bachelor of Technology in Computer Science and Engineering
-        <br>
-        Graphic Era (Deemed to be) University, Dehradun, India
-        <br>
-        Graduation: 2027
-    </p>
-    <br>
-    <p>
-        Intermediate (PCM)
-        <br>
-        Army Public School, Meerut, India
-        <br>
-        Score: 78.60%
-        <br>
-        Graduation: 2022
-    </p>
-    <br>
-    <p>
-        Secondary 
-        <br>
-        Army Public School, Ahmedabad, India
-        <br>
-        Score: 88%
-        <br>
-        Graduation: 2020
-    </p>
-</section>
-
-<section id="skills">
-    <h2>Skills</h2>
-
-    <div class="skill-container">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Java</div>
-        <div class="skill">C++</div>
-        <div class="skill">C</div>
-        <div class="skill">Data Structures and Algorithms</div>
-        <div class="skill">MySQL</div>
-        <div class="skill">Object Oriented Programming</div>
-        <div class="skill">Database Management System</div>
-    </div>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-container">
-
-        <a href="projects/zeroTrust.html" class="project-link">
-    <div class="card">
-        <h3>Zero Trust Security</h3>
-        <p>Implementation of Zero Trust security model in a network environment.</p>
-    </div>
-</a>
-
-        <a href="projects/miniCompiler.html" class="project-link">
-    <div class="card">
-        <h3>Mini Compiler</h3>
-        <p>A simple compiler implementation for a simplified programming language.</p>
-    </div>
-</a>
-        <a href="projects/mme.html" class="project-link">
-    <div class="card">
-        <h3>Multi-media Encryption and Decryption</h3>
-        <p>Implementation of encryption and decryption techniques for multimedia files.</p>
-    </div>
-</a>
-
-    </div>
-</section>
-
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul>
+    <li><a href="#about" class="mobile-link">About</a></li>
+    <li><a href="#education" class="mobile-link">Education</a></li>
+    <li><a href="#skills" class="mobile-link">Skills</a></li>
+    <li><a href="#projects" class="mobile-link">Projects</a></li>
+    <li><a href="#contact" class="mobile-link">Contact</a></li>
+    <li><a href="resume.html" class="mobile-link">Resume</a></li>
+  </ul>
 </div>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-
-    <div class="contact-container">
-
-        <a href="mailto:tanujabhatt797@gmail.com" class="contact-card">
-            <i class="fas fa-envelope"></i>
-            <span>Email</span>
-        </a>
-
-        <a href="https://www.linkedin.com/in/tanuja-bhatt-624272347"
-           target="_blank"
-           class="contact-card">
-            <i class="fab fa-linkedin"></i>
-            <span>LinkedIn</span>
-        </a>
-
-        <a href="https://github.com/tanuja3259"
-           target="_blank"
-           class="contact-card">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
-        </a>
-
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      Available for opportunities
+    </p>
+    <h1 class="hero-name">
+      <span class="name-line">Tanuja</span>
+      <span class="name-line accent-line">Bhatt</span>
+    </h1>
+    <div class="hero-role">
+      <span class="role-prefix">I build</span>
+      <span class="typed-wrapper">
+        <span id="typed-text"></span>
+        <span class="typed-cursor">|</span>
+      </span>
     </div>
+    <p class="hero-bio">
+      Computer Science Engineering student at Graphic Era University — passionate about systems programming, distributed architectures, and building tools that make a difference.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">
+        <span>View Work</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <a href="#contact" class="btn btn-ghost">
+        <span>Get in Touch</span>
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Projects</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">Languages</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num">2027</span>
+        <span class="stat-label">Graduating</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="avatar-ring-outer">
+      <div class="avatar-ring-mid">
+        <div class="avatar-ring-inner">
+          <div class="avatar-initials">TB</div>
+        </div>
+      </div>
+    </div>
+    <div class="orbit orbit-1">
+      <div class="orbit-dot" style="--d:0deg"><i class="fab fa-react"></i></div>
+    </div>
+    <div class="orbit orbit-2">
+      <div class="orbit-dot" style="--d:120deg"><i class="fab fa-python"></i></div>
+    </div>
+    <div class="orbit orbit-3">
+      <div class="orbit-dot" style="--d:240deg"><i class="fab fa-java"></i></div>
+    </div>
+  </div>
+  <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+    <div class="scroll-wheel"></div>
+  </a>
 </section>
 
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="section-inner">
+    <div class="section-label reveal">about me</div>
+    <h2 class="section-title reveal">Building at the intersection of<br><span class="accent">logic and creativity</span></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Highly driven CSE student with strong fundamentals in programming, databases, data structures, and distributed systems. Skilled in C++ with working knowledge of Python, Java, SQL, and Linux.</p>
+        <p>Passionate about software development and eager to contribute to innovative projects that push the boundaries of what's possible.</p>
+        <div class="about-chips">
+          <span class="chip">Problem Solver</span>
+          <span class="chip">Systems Thinker</span>
+          <span class="chip">Fast Learner</span>
+          <span class="chip">Team Player</span>
+        </div>
+      </div>
+      <div class="about-card-stack reveal">
+        <div class="info-card">
+          <i class="fas fa-graduation-cap"></i>
+          <div>
+            <strong>B.Tech CSE</strong>
+            <p>Graphic Era University</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <strong>Location</strong>
+            <p>Dehradun, India</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-calendar"></i>
+          <div>
+            <strong>Graduating</strong>
+            <p>2027</p>
+          </div>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-code"></i>
+          <div>
+            <strong>Focus</strong>
+            <p>Systems & Security</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label reveal">education</div>
+    <h2 class="section-title reveal">Academic <span class="accent">Journey</span></h2>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-badge">2023 – 2027</div>
+          <h3>B.Tech in Computer Science & Engineering</h3>
+          <p class="timeline-inst">Graphic Era (Deemed to be) University, Dehradun</p>
+          <p class="timeline-desc">Focused on algorithms, distributed systems, compiler design, and network security.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">
+          <div class="timeline-dot"></div>
+          <div class="timeline-line"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-badge">2022 · 78.60%</div>
+          <h3>Intermediate — PCM</h3>
+          <p class="timeline-inst">Army Public School, Meerut</p>
+          <p class="timeline-desc">Physics, Chemistry and Mathematics with distinction.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker">
+          <div class="timeline-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-badge">2020 · 88%</div>
+          <h3>Secondary Education</h3>
+          <p class="timeline-inst">Army Public School, Ahmedabad</p>
+          <p class="timeline-desc">Strong academic foundation with honors in science and mathematics.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="section-inner">
+    <div class="section-label reveal">skills</div>
+    <h2 class="section-title reveal">Technical <span class="accent">Arsenal</span></h2>
+    <div class="skills-grid">
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <i class="fas fa-code"></i>
+          <h3>Languages</h3>
+        </div>
+        <div class="skill-pills">
+          <span class="pill pill-primary">C++</span>
+          <span class="pill pill-primary">C</span>
+          <span class="pill pill-primary">Java</span>
+          <span class="pill pill-primary">Python</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <i class="fas fa-brain"></i>
+          <h3>CS Fundamentals</h3>
+        </div>
+        <div class="skill-pills">
+          <span class="pill pill-primary">Data Structures</span>
+          <span class="pill pill-primary">Algorithms</span>
+          <span class="pill pill-primary">OOP</span>
+          <span class="pill">DBMS</span>
+          <span class="pill">Operating Systems</span>
+          <span class="pill">Computer Networks</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <i class="fas fa-database"></i>
+          <h3>Databases & Tools</h3>
+        </div>
+        <div class="skill-pills">
+          <span class="pill pill-primary">MySQL</span>
+          <span class="pill pill-primary">MongoDB</span>
+          <span class="pill">SQLite</span>
+          <span class="pill">Linux</span>
+          <span class="pill">Git</span>
+          <span class="pill">React</span>
+        </div>
+      </div>
+      <div class="skill-category reveal">
+        <div class="skill-cat-header">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Domains</h3>
+        </div>
+        <div class="skill-pills">
+          <span class="pill pill-primary">Cybersecurity</span>
+          <span class="pill pill-primary">Compiler Design</span>
+          <span class="pill">Encryption</span>
+          <span class="pill">JWT Auth</span>
+          <span class="pill">REST APIs</span>
+          <span class="pill">Zero Trust</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section section-alt">
+  <div class="section-inner">
+    <div class="section-label reveal">work</div>
+    <h2 class="section-title reveal">Featured <span class="accent">Projects</span></h2>
+    <div class="projects-grid">
+
+      <!-- Zero Trust -->
+      <a href="projects/zeroTrust.html" class="project-card reveal">
+        <div class="project-card-inner">
+          <div class="project-number">01</div>
+          <div class="project-tag-row">
+            <span class="project-tag">Security</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">Flask</span>
+          </div>
+          <h3 class="project-title">Zero Trust Enterprise<br>Security Model</h3>
+          <p class="project-desc">Full-stack implementation of Zero Trust security — webcam-based biometric login, JWT-protected APIs, role-based access control, and real-time dashboards.</p>
+          <div class="project-footer">
+            <span class="project-cta">View Project <i class="fas fa-arrow-right"></i></span>
+            <a href="https://github.com/tanuja3259/Zero-Trust-Enterprise-Dashboard" target="_blank" class="project-gh" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-glow project-glow-1"></div>
+      </a>
+
+      <!-- Mini Compiler -->
+      <a href="projects/miniCompiler.html" class="project-card reveal">
+        <div class="project-card-inner">
+          <div class="project-number">02</div>
+          <div class="project-tag-row">
+            <span class="project-tag">Systems</span>
+            <span class="project-tag">C</span>
+            <span class="project-tag">Compiler Design</span>
+          </div>
+          <h3 class="project-title">Mini Compiler<br>for C Language</h3>
+          <p class="project-desc">Custom compiler pipeline covering lexical analysis, token generation, syntax validation, symbol table management, and intermediate code generation with error reporting.</p>
+          <div class="project-footer">
+            <span class="project-cta">View Project <i class="fas fa-arrow-right"></i></span>
+            <a href="https://github.com/tanuja3259/Mini-Compiler-" target="_blank" class="project-gh" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-glow project-glow-2"></div>
+      </a>
+
+      <!-- MME -->
+      <a href="projects/mme.html" class="project-card reveal">
+        <div class="project-card-inner">
+          <div class="project-number">03</div>
+          <div class="project-tag-row">
+            <span class="project-tag">Security</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">Node.js</span>
+          </div>
+          <h3 class="project-title">Multi-media Encryption<br>&amp; Decryption</h3>
+          <p class="project-desc">Secure web platform for encrypting and decrypting images, audio, video, and documents. Full MERN stack with JWT authentication and SMTP email verification.</p>
+          <div class="project-footer">
+            <span class="project-cta">View Project <i class="fas fa-arrow-right"></i></span>
+            <a href="https://github.com/tanuja3259/Web-Based-Multimedia-Encryption-and-Decryption" target="_blank" class="project-gh" onclick="event.stopPropagation()"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+        <div class="project-glow project-glow-3"></div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="section-inner">
+    <div class="section-label reveal">contact</div>
+    <h2 class="section-title reveal">Let's <span class="accent">Connect</span></h2>
+    <p class="contact-sub reveal">Open to internships, collaborations, and interesting problems. Reach out — I'd love to talk.</p>
+    <div class="contact-row reveal">
+      <a href="mailto:tanujabhatt797@gmail.com" class="contact-btn">
+        <div class="contact-btn-icon"><i class="fas fa-envelope"></i></div>
+        <div class="contact-btn-text">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">tanujabhatt797@gmail.com</span>
+        </div>
+        <i class="fas fa-external-link-alt contact-arrow"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/tanuja-bhatt-tech" target="_blank" class="contact-btn">
+        <div class="contact-btn-icon"><i class="fab fa-linkedin"></i></div>
+        <div class="contact-btn-text">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">tanuja-bhatt-tech</span>
+        </div>
+        <i class="fas fa-external-link-alt contact-arrow"></i>
+      </a>
+      <a href="https://github.com/tanuja3259" target="_blank" class="contact-btn">
+        <div class="contact-btn-icon"><i class="fab fa-github"></i></div>
+        <div class="contact-btn-text">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">tanuja3259</span>
+        </div>
+        <i class="fas fa-external-link-alt contact-arrow"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Tanuja Bhatt</p>
+  <div class="footer-inner">
+    <span class="footer-logo"><span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span></span>
+    <p>Designed &amp; built by Tanuja Bhatt · 2026</p>
+    <a href="#hero" class="back-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>

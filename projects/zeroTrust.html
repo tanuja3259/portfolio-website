@@ -1,158 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Trust Enterprises Model | Tanuja Bhatt</title>
-
-    <link rel="stylesheet" href="project.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zero Trust Security — Tanuja Bhatt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
 
-<div class="container">
+<canvas id="bgCanvas"></canvas>
 
-    <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+<nav class="proj-nav">
+  <div class="proj-nav-inner">
+    <a href="../index.html" class="proj-nav-logo">
+      <span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span>
+    </a>
+    <a href="../index.html" class="proj-back">
+      <i class="fas fa-arrow-left"></i> All Projects
+    </a>
+    <a href="https://github.com/tanuja3259/Zero-Trust-Enterprise-Dashboard" target="_blank" class="proj-gh-link">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</nav>
 
-    <h1>Zero Trust Enterprises Model</h1>
+<!-- HERO -->
+<div class="proj-hero reveal">
+  <div class="proj-number">PROJECT 01</div>
+  <div class="proj-tags">
+    <span class="proj-tag">Security</span>
+    <span class="proj-tag">React + Vite</span>
+    <span class="proj-tag">Flask</span>
+    <span class="proj-tag">SQLite</span>
+    <span class="proj-tag">JWT</span>
+  </div>
+  <h1>Zero Trust Enterprise<br><span class="accent">Security Model</span></h1>
+  <p class="lead">A full-stack implementation of the Zero Trust security paradigm — verifying every user, device, and request regardless of network location, with real-time dashboards and biometric authentication.</p>
+  <div class="proj-hero-actions">
+    <a href="https://github.com/tanuja3259/Zero-Trust-Enterprise-Dashboard" target="_blank" class="btn btn-primary">
+      <i class="fab fa-github"></i> View on GitHub
+    </a>
+    <a href="../index.html" class="btn btn-ghost">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+  </div>
+</div>
 
-    <div class="section">
-        <h2>Problem Statement</h2>
+<!-- BODY -->
+<div class="proj-body">
+  <div class="proj-main">
 
-        <p>
-            Traditional security models rely on a perimeter-based approach, which assumes that everything inside the network is trustworthy. 
-            However, with the rise of remote work, cloud computing, and sophisticated cyber threats, this model has become inadequate. 
-            The Zero Trust model addresses these challenges by enforcing strict access controls and continuous verification of users and devices, regardless of their location.
-
-        </p>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">problem</div>
+      <h2>The Challenge</h2>
+      <p>Traditional perimeter-based security models assume everything inside a network is trustworthy — a flawed assumption in the era of remote work, cloud computing, and sophisticated cyber threats. Once an attacker gets past the perimeter, they often have unrestricted access to critical systems. The Zero Trust model addresses this by enforcing strict, continuous verification for every entity.</p>
     </div>
 
-    <div class="section">
-        <h2>Purpose of the Project</h2>
-
-        <p>
-            The Zero Trust model is crucial for modern enterprises to protect sensitive data and systems from breaches. 
-            Implementing this model can significantly reduce the attack surface and mitigate risks associated with insider threats and compromised credentials. 
-            This project aims to demonstrate the implementation of Zero Trust principles in a simulated enterprise environment, showcasing its effectiveness in enhancing security posture.
-        </p>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">approach</div>
+      <h2>How It Was Built</h2>
+      <ul>
+        <li>Designed the complete Zero Trust architecture for a simulated enterprise environment</li>
+        <li>Implemented webcam-based biometric enrollment and login verification</li>
+        <li>Built JWT-protected API endpoints with role-based access control</li>
+        <li>Developed an admin dashboard for real-time security policy management</li>
+        <li>Integrated attendance tracking and file access APIs with detailed logging</li>
+      </ul>
     </div>
 
-    <div class="section">
-        <h2>Approach</h2>
-
-        <ul>
-            <li>Designed the architecture for the Zero Trust model implementation.</li>
-            <li>Developed a simulated enterprise environment to demonstrate Zero Trust principles.</li>
-            <li>Implemented strict role based access controls and continuous verification mechanisms.</li>
-            <li>Created a user-friendly interface for managing and monitoring security policies.</li>
-            <li>Integrated logging and reporting features to track security events.</li>
-        </ul>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">how it works</div>
+      <h2>System Working</h2>
+      <p>Users register with email credentials and simultaneously enroll their webcam image as a biometric factor. At login, the system verifies both factors — a password check and a live webcam match against the stored hash. On success, a short-lived JWT is issued. Every subsequent API call validates that token, and the user's role (Employee, Manager, or Admin) determines which resources they can access. All actions are logged to an audit trail.</p>
     </div>
 
-    <div class="section">
-        <h2>Working</h2>
-
-        <p>
-            The project simulates an enterprise network where users and devices must authenticate and be authorized before accessing resources. 
-            It includes features such as multi-factor authentication, least privilege access, and continuous monitoring to ensure that only trusted entities can interact with critical systems. 
-            The interface allows administrators to define security policies, monitor access attempts, and respond to potential threats in real-time.
-        </p>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">challenges</div>
+      <h2>Challenges Faced</h2>
+      <ul>
+        <li>Designing a secure and scalable architecture that remains performant under concurrent access</li>
+        <li>Implementing robust image hash matching for biometric verification without a GPU pipeline</li>
+        <li>Preventing token replay attacks and enforcing session expiry correctly</li>
+      </ul>
     </div>
 
-    <div class="section">
-        <h2>Technologies Used</h2>
-
-        <ul>
-            <li>Frontend: React + Vite</li>
-            <li>Backend: Flask + SQLAlchemy</li>
-            <li>Database: SQLite (instance/ztesd.db)</li>
-            <li>Auth: Email/password + webcam verification (image hash matching)</li>
-        </ul>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">roadmap</div>
+      <h2>Future Enhancements</h2>
+      <ul>
+        <li>Enhanced threat detection using anomaly-based ML models</li>
+        <li>Replace image hash matching with a proper facial recognition pipeline</li>
+        <li>Expanded integration with LDAP / Active Directory</li>
+        <li>Advanced automated compliance reporting</li>
+        <li>Real-time alerting via push notifications</li>
+      </ul>
     </div>
 
-    <div class="section">
-        <h2>Key Features</h2>
+  </div>
 
-        <ul>
-            <li>User registration with webcam enrollment</li>
-            <li>Login with webcam verification</li>
-            <li>JWT-based protected APIs</li>
-            <li>Role-based access (Employee, Manager, Admin)</li>
-            <li>Attendance, dashboard, file APIs</li>
-        </ul>
+  <aside class="proj-sidebar">
+
+    <div class="sidebar-card reveal">
+      <h3>Tech Stack</h3>
+      <div class="tech-list">
+        <div class="tech-item"><i class="fab fa-react"></i> React + Vite</div>
+        <div class="tech-item"><i class="fab fa-python"></i> Flask</div>
+        <div class="tech-item"><i class="fas fa-database"></i> SQLite</div>
+        <div class="tech-item"><i class="fas fa-key"></i> JWT Auth</div>
+        <div class="tech-item"><i class="fas fa-camera"></i> Webcam Biometrics</div>
+      </div>
     </div>
 
-    <div class="section">
-        <h2>Project Screenshots</h2>
-
-        <div class="screenshots">
-
-            <img src="../images/Zero_Trust_01.png" alt="Zero Trust Screenshot 1">
-
-            <img src="../images/Zero_Trust_02.png" alt="Zero Trust Screenshot 2">
-
-            <img src="../images/ZeroTrust_03.png" alt="Zero Trust Screenshot 3">
-
-            <img src="../images/ZeroTrust_04.png" alt="Zero Trust Screenshot 4">
-
-            <img src="../images/ZeroTrust_05.png" alt="Zero Trust Screenshot 5">
-
-            <img src="../images/ZeroTrust_06.png" alt="Zero Trust Screenshot 6">
-
-        </div>
+    <div class="sidebar-card reveal">
+      <h3>Key Features</h3>
+      <div class="feat-list">
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Webcam biometric enrollment</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> JWT-protected APIs</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Role-based access (3 tiers)</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Real-time admin dashboard</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Attendance & file APIs</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Full audit logging</div>
+      </div>
     </div>
 
-    
+    <div class="sidebar-card reveal">
+      <h3>Authentication Flow</h3>
+      <div class="workflow">
+        <div class="workflow-step"><div class="step-num">01</div><span class="step-label">Email + Password</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">02</div><span class="step-label">Webcam Verification</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">03</div><span class="step-label">JWT Issued</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">04</div><span class="step-label">Role-Based Access</span></div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- SCREENSHOTS -->
+<div class="screenshots-section">
+  <h2>Project <span>Screenshots</span></h2>
+  <div class="screenshot-grid">
+    <div class="screenshot-thumb reveal"><img src="../images/Zero_Trust_01.png" alt="Screenshot 1"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/Zero_Trust_02.png" alt="Screenshot 2"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/ZeroTrust_03.png" alt="Screenshot 3"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/ZeroTrust_04.png" alt="Screenshot 4"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/ZeroTrust_05.png" alt="Screenshot 5"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/ZeroTrust_06.png" alt="Screenshot 6"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
-
-    <span class="close-lightbox">&times;</span>
-
-    <span class="prev">&#10094;</span>
-
-    <img id="lightbox-img">
-
-    <span class="next">&#10095;</span>
-
+  <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+  <button class="lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+  <img id="lightbox-img" class="lightbox-img" alt="Screenshot">
+  <button class="lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
-<script src="gallery.js"></script>
+<footer class="proj-footer">
+  <div class="proj-footer-inner">
+    <span class="proj-footer-logo"><span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span></span>
+    <p>Zero Trust Security Model · Tanuja Bhatt</p>
+    <a href="../index.html#projects" style="font-size:.82rem;color:var(--muted);">← All Projects</a>
+  </div>
+</footer>
 
-    <div class="section">
-        <h2>Challenges Faced</h2>
-
-        <ul>
-            <li>Designing a secure and scalable architecture for the Zero Trust model.</li>
-            <li>Implementing robust authentication and authorization mechanisms.</li>
-            <li>Ensuring seamless integration of various security components.</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>Future Enhancements</h2>
-
-        <ul>
-            <li>Enhanced Threat Detection</li>
-            <li>Improved User Experience</li>
-            <li>Expanded Integration Capabilities</li>
-            <li>Advanced Reporting Features</li>
-            <li>Automated Compliance Management</li>
-        </ul>
-    </div>
-
-    <div class="section">
-        <h2>GitHub Repository</h2>
-
-        <p>
-            Source code for this project is available on GitHub.
-        </p>
-
-        <a href="https://github.com/tanuja3259/Zero-Trust-Enterprise-Dashboard/tree/main"
-           target="_blank"
-           class="github-btn">
-           View Source Code
-        </a>
-    </div>
-
-</div>
-
+<script src="project.js"></script>
 </body>
 </html>

@@ -1,172 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-media Encryption and Decryption | Tanuja Bhatt</title>
-
-    <link rel="stylesheet" href="project.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multimedia Encryption — Tanuja Bhatt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
 
-<div class="container">
+<canvas id="bgCanvas"></canvas>
 
-    <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+<nav class="proj-nav">
+  <div class="proj-nav-inner">
+    <a href="../index.html" class="proj-nav-logo">
+      <span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span>
+    </a>
+    <a href="../index.html" class="proj-back">
+      <i class="fas fa-arrow-left"></i> All Projects
+    </a>
+    <a href="https://github.com/tanuja3259/Web-Based-Multimedia-Encryption-and-Decryption" target="_blank" class="proj-gh-link">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</nav>
 
-    <h1>Multi-media Encryption and Decryption</h1>
-
-    <div class="section">
-    <h2>Problem Statement</h2>
-
-    <p>
-        With the increasing exchange of multimedia files such as images,
-        audio, and videos over the internet, protecting sensitive data
-        from unauthorized access has become a major challenge.
-        Traditional file-sharing methods often expose data to security
-        risks, making encryption essential for maintaining confidentiality
-        and privacy.
-    </p>
+<!-- HERO -->
+<div class="proj-hero reveal">
+  <div class="proj-number">PROJECT 03</div>
+  <div class="proj-tags">
+    <span class="proj-tag">Security</span>
+    <span class="proj-tag">React.js</span>
+    <span class="proj-tag">Node.js</span>
+    <span class="proj-tag">MongoDB</span>
+    <span class="proj-tag">JWT</span>
+  </div>
+  <h1>Multimedia Encryption<br><span class="accent">&amp; Decryption</span></h1>
+  <p class="lead">A full-stack MERN web application for securely encrypting and decrypting images, audio, video, and documents — with JWT authentication, SMTP email verification, and a clean, intuitive interface.</p>
+  <div class="proj-hero-actions">
+    <a href="https://github.com/tanuja3259/Web-Based-Multimedia-Encryption-and-Decryption" target="_blank" class="btn btn-primary">
+      <i class="fab fa-github"></i> View on GitHub
+    </a>
+    <a href="../index.html" class="btn btn-ghost">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+  </div>
 </div>
 
-    <div class="section">
-    <h2>Purpose of the Project</h2>
+<!-- BODY -->
+<div class="proj-body">
+  <div class="proj-main">
 
-    <p>
-        The purpose of this project is to provide a secure platform for
-        encrypting and decrypting multimedia files. It enables users to
-        protect their images, audio, videos, and documents using strong
-        encryption techniques, ensuring that only authorized users can
-        access the original content.
-    </p>
-</div>
-
-   <div class="section">
-    <h2>Approach</h2>
-
-    <ul>
-        <li>Designed a secure web-based multimedia encryption system.</li>
-        <li>Implemented encryption and decryption functionalities for different file types.</li>
-        <li>Developed a user-friendly interface for file upload and processing.</li>
-        <li>Integrated secure key management mechanisms.</li>
-        <li>Ensured efficient handling of large multimedia files.</li>
-    </ul>
-</div>
-
-    <div class="section">
-    <h2>Working</h2>
-
-    <p>
-        Users can upload multimedia files through the web interface and
-        choose whether to encrypt or decrypt them. The system processes
-        the files using encryption algorithms and generates secure output
-        files. During decryption, the correct key is required to restore
-        the original content. This ensures confidentiality and prevents
-        unauthorized access to sensitive multimedia data.
-    </p>
-</div>
-
-    <div class="section">
-    <h2>Technologies Used</h2>
-
-    <ul>
-        <li>Frontend: React.js</li>
-        <li>Backend: Express.js (Node.js)</li>
-        <li>Database: MongoDB</li>
-        <li>Authentication: JWT (JSON Web Tokens)</li>
-        <li>Email Service: SMTP for email notifications and verification</li>
-        <li>Encryption: Multimedia file encryption and decryption algorithms</li>
-    </ul>
-</div>
-
-    <div class="section">
-    <h2>Key Features</h2>
-
-    <ul>
-        <li>Image, Audio, Video and Document Encryption</li>
-        <li>Secure File Decryption using Secret Key</li>
-        <li>User-Friendly Web Interface</li>
-        <li>Fast Processing of Multimedia Files</li>
-        <li>Protection Against Unauthorized Access</li>
-    </ul>
-</div>
-
-    <div class="section">
-        <h2>Project Screenshots</h2>
-
-        <div class="screenshots">
-
-            <img src="../images/mme_01.png" alt="Multi-media Encryption Screenshot 1">
-
-            <img src="../images/mme_02.png" alt="Multi-media Encryption Screenshot 2">
-
-            <img src="../images/mme_03.png" alt="Multi-media Encryption Screenshot 3">
-
-            <img src="../images/mme_04.png" alt="Multi-media Encryption Screenshot 4">
-
-            <img src="../images/mme_05.png" alt="Multi-media Encryption Screenshot 5">
-
-            <img src="../images/mme_06.png" alt="Multi-media Encryption Screenshot 6">
-
-            <img src="../images/mme_07.png" alt="Multi-media Encryption Screenshot 7">
-
-            <img src="../images/mme_08.png" alt="Multi-media Encryption Screenshot 8">
-
-        </div>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">problem</div>
+      <h2>The Challenge</h2>
+      <p>As multimedia files — images, audio, and videos — are increasingly exchanged over the internet, protecting sensitive content from unauthorized access has become critical. Traditional file-sharing methods expose data to significant security risks, and most existing tools are either too complex for everyday users or sacrifice security for convenience. This project bridges that gap with a web-based, user-friendly encryption platform.</p>
     </div>
 
-    
+    <div class="proj-section reveal">
+      <div class="proj-section-label">approach</div>
+      <h2>How It Was Built</h2>
+      <ul>
+        <li>Designed a secure REST API in Express.js for file upload, encryption, and decryption</li>
+        <li>Built a React.js frontend with drag-and-drop file upload and real-time feedback</li>
+        <li>Implemented strong symmetric encryption for all supported file types</li>
+        <li>Integrated JWT-based authentication and SMTP email verification</li>
+        <li>Used MongoDB to manage user accounts, file metadata, and encryption keys</li>
+        <li>Ensured efficient streaming for large files to avoid memory bottlenecks</li>
+      </ul>
+    </div>
+
+    <div class="proj-section reveal">
+      <div class="proj-section-label">how it works</div>
+      <h2>System Working</h2>
+      <p>After registering and verifying their email, users log in with a JWT-issued session. They upload a file through the interface and choose to encrypt or decrypt it. The backend processes the file using the chosen encryption algorithm and returns a secured or restored output. For decryption, the correct secret key is required — without it, the content remains inaccessible. All file operations are logged and tied to the authenticated user.</p>
+    </div>
+
+    <div class="proj-section reveal">
+      <div class="proj-section-label">challenges</div>
+      <h2>Challenges Faced</h2>
+      <ul>
+        <li>Handling multiple binary file formats (images, audio, video, PDF) without corruption</li>
+        <li>Streaming large files through the encryption pipeline efficiently</li>
+        <li>Keeping encryption keys secure while keeping the UX simple</li>
+        <li>Ensuring data integrity — that decrypted output exactly matches the original</li>
+      </ul>
+    </div>
+
+    <div class="proj-section reveal">
+      <div class="proj-section-label">roadmap</div>
+      <h2>Future Enhancements</h2>
+      <ul>
+        <li>Cloud storage integration (AWS S3 / Google Drive)</li>
+        <li>Advanced encryption modes (AES-GCM, ChaCha20-Poly1305)</li>
+        <li>Multi-user secure file sharing with per-recipient keys</li>
+        <li>Real-time collaborative encryption sessions</li>
+        <li>Security monitoring and anomaly alerting dashboard</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <aside class="proj-sidebar">
+
+    <div class="sidebar-card reveal">
+      <h3>Tech Stack</h3>
+      <div class="tech-list">
+        <div class="tech-item"><i class="fab fa-react"></i> React.js</div>
+        <div class="tech-item"><i class="fab fa-node-js"></i> Express / Node.js</div>
+        <div class="tech-item"><i class="fas fa-leaf"></i> MongoDB</div>
+        <div class="tech-item"><i class="fas fa-key"></i> JWT Auth</div>
+        <div class="tech-item"><i class="fas fa-envelope"></i> SMTP Email</div>
+        <div class="tech-item"><i class="fas fa-lock"></i> Encryption Algorithms</div>
+      </div>
+    </div>
+
+    <div class="sidebar-card reveal">
+      <h3>Key Features</h3>
+      <div class="feat-list">
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Image encryption &amp; decryption</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Audio / video support</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Document encryption</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> JWT authentication</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> SMTP email verification</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Secret-key decryption</div>
+      </div>
+    </div>
+
+    <div class="sidebar-card reveal">
+      <h3>User Flow</h3>
+      <div class="workflow">
+        <div class="workflow-step"><div class="step-num">01</div><span class="step-label">Register &amp; Verify Email</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">02</div><span class="step-label">Login (JWT Issued)</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">03</div><span class="step-label">Upload File</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">04</div><span class="step-label">Encrypt / Decrypt</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">05</div><span class="step-label">Download Secure File</span></div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- SCREENSHOTS -->
+<div class="screenshots-section">
+  <h2>Project <span>Screenshots</span></h2>
+  <div class="screenshot-grid">
+    <div class="screenshot-thumb reveal"><img src="../images/mme_01.png" alt="Screenshot 1"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/mme_02.png" alt="Screenshot 2"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/mme_03.png" alt="Screenshot 3"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/mme_04.png" alt="Screenshot 4"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/mme_05.png" alt="Screenshot 5"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/mme_06.png" alt="Screenshot 6"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/mme_07.png" alt="Screenshot 7"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/mme_08.png" alt="Screenshot 8"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
-
-    <span class="close-lightbox">&times;</span>
-
-    <span class="prev">&#10094;</span>
-
-    <img id="lightbox-img">
-
-    <span class="next">&#10095;</span>
-
+  <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+  <button class="lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+  <img id="lightbox-img" class="lightbox-img" alt="Screenshot">
+  <button class="lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
-<script src="gallery.js"></script>
+<footer class="proj-footer">
+  <div class="proj-footer-inner">
+    <span class="proj-footer-logo"><span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span></span>
+    <p>Multimedia Encryption · Tanuja Bhatt</p>
+    <a href="../index.html#projects" style="font-size:.82rem;color:var(--muted);">← All Projects</a>
+  </div>
+</footer>
 
-    <div class="section">
-    <h2>Challenges Faced</h2>
-
-    <ul>
-        <li>Handling different multimedia file formats efficiently.</li>
-        <li>Implementing secure encryption and decryption mechanisms.</li>
-        <li>Managing large file sizes without affecting performance.</li>
-        <li>Ensuring data integrity during file processing.</li>
-    </ul>
-</div>
-
-    <div class="section">
-    <h2>Future Enhancements</h2>
-
-    <ul>
-        <li>Support for cloud storage integration.</li>
-        <li>Advanced encryption algorithms.</li>
-        <li>Multi-user authentication and access control.</li>
-        <li>Real-time file sharing with encryption.</li>
-        <li>Enhanced security monitoring and logging.</li>
-    </ul>
-</div>
-
-    <div class="section">
-        <h2>GitHub Repository</h2>
-
-        <p>
-            Source code for this project is available on GitHub.
-        </p>
-
-        <a href="https://github.com/tanuja3259/Web-Based-Multimedia-Encryption-and-Decryption"
-           target="_blank"
-           class="github-btn">
-           View Source Code
-        </a>
-    </div>
-
-</div>
-
+<script src="project.js"></script>
 </body>
 </html>

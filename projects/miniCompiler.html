@@ -1,184 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zero Trust Enterprises Model | Tanuja Bhatt</title>
-    <link rel="stylesheet" href="project.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Compiler — Tanuja Bhatt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="project.css">
 </head>
-
 <body>
 
-<div class="container">
+<canvas id="bgCanvas"></canvas>
 
-    <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+<nav class="proj-nav">
+  <div class="proj-nav-inner">
+    <a href="../index.html" class="proj-nav-logo">
+      <span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span>
+    </a>
+    <a href="../index.html" class="proj-back">
+      <i class="fas fa-arrow-left"></i> All Projects
+    </a>
+    <a href="https://github.com/tanuja3259/Mini-Compiler-" target="_blank" class="proj-gh-link">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</nav>
 
-    <h1>Mini Compiler</h1>
+<!-- HERO -->
+<div class="proj-hero reveal">
+  <div class="proj-number">PROJECT 02</div>
+  <div class="proj-tags">
+    <span class="proj-tag">Systems</span>
+    <span class="proj-tag">C</span>
+    <span class="proj-tag">Compiler Design</span>
+    <span class="proj-tag">Lexical Analysis</span>
+  </div>
+  <h1>Mini Compiler<br><span class="accent">for C Language</span></h1>
+  <p class="lead">A hand-built compiler pipeline that processes C source code through lexical analysis, parsing, symbol table management, and intermediate code generation — with structured error reporting at every phase.</p>
+  <div class="proj-hero-actions">
+    <a href="https://github.com/tanuja3259/Mini-Compiler-" target="_blank" class="btn btn-primary">
+      <i class="fab fa-github"></i> View on GitHub
+    </a>
+    <a href="../index.html" class="btn btn-ghost">
+      <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+  </div>
+</div>
 
-    <div class="section">
-        <h2>Problem Statement</h2>
+<!-- BODY -->
+<div class="proj-body">
+  <div class="proj-main">
 
-        <p>
-            The project involves designing and implementing a simple compiler for a C language. 
-            The compiler should be able to parse source code, generate intermediate code, and produce executable output. 
-            The goal is to demonstrate the fundamental concepts of compiler design, including lexical analysis, syntax analysis, semantic analysis, and code generation.
-        </p>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">problem</div>
+      <h2>The Challenge</h2>
+      <p>Compilers are one of the most complex pieces of software in existence — translating human-readable source code into machine instructions through multiple precise phases. This project aims to build a stripped-down but fully functional compiler for a subset of C, demonstrating each phase from tokenization through to intermediate code generation, to deepen understanding of how modern compilers work under the hood.</p>
     </div>
 
-    <div class="section">
-        <h2>Purpose of the Project</h2>
-
-        <p>
-            The Mini Compiler project aims to provide a hands-on understanding of the compiler construction process. 
-            By building a simple compiler, students can grasp the intricacies of translating high-level code into machine-readable instructions. 
-            This project serves as an educational tool to illustrate the principles of lexical analysis, syntax analysis, semantic analysis, and code generation.
-        </p>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">approach</div>
+      <h2>How It Was Built</h2>
+      <ul>
+        <li>Defined a formal grammar for a subset of the C language</li>
+        <li>Built a hand-written lexer that identifies tokens, keywords, operators, and literals</li>
+        <li>Implemented a recursive descent parser to validate grammar rules</li>
+        <li>Designed a symbol table to track identifiers, types, and scopes</li>
+        <li>Generated three-address intermediate code for further optimization</li>
+        <li>Added structured error messages with line numbers and context</li>
+      </ul>
     </div>
 
-    <div class="section">
-        <h2>Approach</h2>
-
-        <ul>
-            <li>Designed the architecture for the Mini Compiler implementation.</li>
-            <li>Developed a simulated environment to demonstrate compiler concepts.</li>
-            <li>Implemented lexical, syntax, and semantic analysis components.</li>
-            <li>Created a user-friendly interface for managing and monitoring security policies.</li>
-            <li>Integrated logging and reporting features to track security events.</li>
-        </ul>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">how it works</div>
+      <h2>Compiler Workflow</h2>
+      <p>The source file is read character-by-character by the lexer, which emits a stream of classified tokens. The parser consumes that stream, validating it against the grammar using recursive descent. As declarations are encountered, the symbol table is updated. Once parsing succeeds, the code generator walks the syntax tree to emit three-address instructions. Any violation at any stage produces a descriptive error pointing back to the offending line.</p>
     </div>
 
-    <div class="section">
-    <h2>Compiler Workflow</h2>
-
-    <ul>
-        <li>Source Code Input</li>
-        <li>Lexical Analysis</li>
-        <li>Token Generation</li>
-        <li>Syntax Analysis</li>
-        <li>Symbol Table Management</li>
-        <li>Intermediate Code Generation</li>
-        <li>Error Reporting</li>
-    </ul>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">challenges</div>
+      <h2>Challenges Faced</h2>
+      <ul>
+        <li>Designing unambiguous grammar rules that cover enough C constructs to be useful</li>
+        <li>Handling operator precedence and associativity correctly in the parser</li>
+        <li>Managing nested scopes in the symbol table without memory leaks</li>
+        <li>Generating meaningful, actionable error messages for malformed input</li>
+      </ul>
     </div>
 
-    <div class="section">
-    <h2>Working</h2>
-
-    <p>
-        The Mini Compiler processes source code through multiple phases.
-        First, the lexical analyzer scans the input and identifies tokens
-        such as keywords, identifiers, operators, and constants.
-        The parser then checks whether the code follows the defined grammar rules.
-        A symbol table is maintained to store identifiers and their attributes.
-        Finally, intermediate code is generated and stored for further processing.
-        Any syntax errors encountered during compilation are reported to the user.
-    </p>
+    <div class="proj-section reveal">
+      <div class="proj-section-label">roadmap</div>
+      <h2>Future Enhancements</h2>
+      <ul>
+        <li>Full semantic analysis — type checking, scope resolution</li>
+        <li>Code optimization passes (constant folding, dead code elimination)</li>
+        <li>x86 assembly code generation backend</li>
+        <li>Support for pointers, structs, and function prototypes</li>
+        <li>Graphical visualization of the parse tree</li>
+      </ul>
     </div>
 
-    <div class="section">
-    <h2>Technologies Used</h2>
+  </div>
 
-    <ul>
-        <li>C Programming</li>
-        <li>Lexical Analysis</li>
-        <li>Syntax Analysis</li>
-        <li>Symbol Table Management</li>
-        <li>Intermediate Code Generation</li>
-        <li>Compiler Design Concepts</li>
-    </ul>
+  <aside class="proj-sidebar">
+
+    <div class="sidebar-card reveal">
+      <h3>Tech Stack</h3>
+      <div class="tech-list">
+        <div class="tech-item"><i class="fas fa-code"></i> C Programming</div>
+        <div class="tech-item"><i class="fas fa-search"></i> Lexical Analysis</div>
+        <div class="tech-item"><i class="fas fa-sitemap"></i> Recursive Descent Parser</div>
+        <div class="tech-item"><i class="fas fa-table"></i> Symbol Table</div>
+        <div class="tech-item"><i class="fas fa-cogs"></i> Intermediate Code Gen</div>
+      </div>
     </div>
 
-    <div class="section">
-    <h2>Key Features</h2>
-
-    <ul>
-        <li>Lexical Analysis</li>
-        <li>Token Generation</li>
-        <li>Syntax Validation</li>
-        <li>Symbol Table Creation</li>
-        <li>Error Detection and Reporting</li>
-        <li>Intermediate Code Generation</li>
-    </ul>
+    <div class="sidebar-card reveal">
+      <h3>Key Features</h3>
+      <div class="feat-list">
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Token classification</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Grammar validation</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Symbol table with scopes</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Three-address IR generation</div>
+        <div class="feat-item"><div class="feat-check"><i class="fas fa-check"></i></div> Structured error reporting</div>
+      </div>
     </div>
 
-    <div class="section">
-        <h2>Project Screenshots</h2>
-
-        <div class="screenshots">
-
-            <img src="../images/Minic_01.png" alt="Mini Compiler Screenshot 1">
-
-            <img src="../images/Minic_02.png" alt="Mini Compiler Screenshot 2">
-
-            <img src="../images/Minic_03.png" alt="Mini Compiler Screenshot 3">
-
-            <img src="../images/Minic_04.png" alt="Mini Compiler Screenshot 4">
-
-            <img src="../images/Minic_05.png" alt="Mini Compiler Screenshot 5">
-
-            <img src="../images/Minic_06.png" alt="Mini Compiler Screenshot 6">
-
-            <img src="../images/Minic_07.png" alt="Mini Compiler Screenshot 7">
-
-            <img src="../images/Minic_08.png" alt="Mini Compiler Screenshot 8">
-
-        </div>
+    <div class="sidebar-card reveal">
+      <h3>Compiler Phases</h3>
+      <div class="workflow">
+        <div class="workflow-step"><div class="step-num">01</div><span class="step-label">Source Input</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">02</div><span class="step-label">Lexical Analysis</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">03</div><span class="step-label">Token Stream</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">04</div><span class="step-label">Syntax Analysis</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">05</div><span class="step-label">Symbol Table</span></div>
+        <div class="step-arrow"></div>
+        <div class="workflow-step"><div class="step-num">06</div><span class="step-label">IR Generation</span></div>
+      </div>
     </div>
 
-    
+  </aside>
+</div>
+
+<!-- SCREENSHOTS -->
+<div class="screenshots-section">
+  <h2>Project <span>Screenshots</span></h2>
+  <div class="screenshot-grid">
+    <div class="screenshot-thumb reveal"><img src="../images/Minic_01.png" alt="Screenshot 1"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/Minic_02.png" alt="Screenshot 2"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/Minic_03.png" alt="Screenshot 3"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/Minic_04.png" alt="Screenshot 4"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/Minic_05.png" alt="Screenshot 5"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/Minic_06.png" alt="Screenshot 6"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/Minic_07.png" alt="Screenshot 7"></div>
+    <div class="screenshot-thumb reveal"><img src="../images/Minic_08.png" alt="Screenshot 8"></div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox">
-
-    <span class="close-lightbox">&times;</span>
-
-    <span class="prev">&#10094;</span>
-
-    <img id="lightbox-img">
-
-    <span class="next">&#10095;</span>
-
+  <button class="lightbox-close" id="lightbox-close"><i class="fas fa-times"></i></button>
+  <button class="lightbox-prev" id="lightbox-prev"><i class="fas fa-chevron-left"></i></button>
+  <img id="lightbox-img" class="lightbox-img" alt="Screenshot">
+  <button class="lightbox-next" id="lightbox-next"><i class="fas fa-chevron-right"></i></button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
 </div>
 
-<script src="gallery.js"></script>
+<footer class="proj-footer">
+  <div class="proj-footer-inner">
+    <span class="proj-footer-logo"><span class="logo-bracket">&lt;</span>TB<span class="logo-bracket">/&gt;</span></span>
+    <p>Mini Compiler · Tanuja Bhatt</p>
+    <a href="../index.html#projects" style="font-size:.82rem;color:var(--muted);">← All Projects</a>
+  </div>
+</footer>
 
-    <div class="section">
-    <h2>Challenges Faced</h2>
-
-    <ul>
-        <li>Designing grammar rules for parsing.</li>
-        <li>Handling invalid syntax efficiently.</li>
-        <li>Managing symbol table operations.</li>
-        <li>Generating meaningful error messages.</li>
-        <li>Integrating lexical and syntax analysis modules.</li>
-    </ul>
-    </div>
-
-    <div class="section">
-    <h2>Future Enhancements</h2>
-
-    <ul>
-        <li>Semantic Analysis Module</li>
-        <li>Code Optimization Techniques</li>
-        <li>Assembly Code Generation</li>
-        <li>Support for Additional Language Features</li>
-        <li>Graphical User Interface</li>
-    </ul>
-    </div>
-
-    <div class="section">
-        <h2>GitHub Repository</h2>
-
-        <p>
-            Source code for this project is available on GitHub.
-        </p>
-
-        <a href="https://github.com/tanuja3259/Mini-Compiler-"
-           target="_blank"
-           class="github-btn">
-           View Source Code
-        </a>
-    </div>
-
-</div>
-
+<script src="project.js"></script>
 </body>
 </html>
